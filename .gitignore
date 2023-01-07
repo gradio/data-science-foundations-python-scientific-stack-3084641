@@ -5,3 +5,5 @@ node_modules
 npm-debug.log
 taxi.csv
 taxi.parquet
+Ch09/09_05/__pycache__/scale.cpython-310.pyc
+Ch09/09_05/__pycache__/test_scale.cpython-310-pytest-7.2.0.pyc
