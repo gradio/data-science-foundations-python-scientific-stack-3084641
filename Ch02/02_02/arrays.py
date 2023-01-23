@@ -10,6 +10,7 @@ len(arr)
 # %%
 arr[1]
 
+
 # %%
 type(arr[1])
 
