@@ -35,3 +35,6 @@ values[mask]
 
 # %%
 values[mask] = values.mean()
+#look up to make sure it did this correctly
+values[mask]
+# %%
