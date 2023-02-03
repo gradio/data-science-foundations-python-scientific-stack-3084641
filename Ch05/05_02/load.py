@@ -14,10 +14,11 @@ df.dtypes
 # %%
 time_cols = [
     'tpep_pickup_datetime',
-    'tpep_dropoff_datetime',
+    'tpep_dropoff_datetime'
 ]
 df = pd.read_csv(
     csv_file,
     parse_dates=time_cols,
 )
 df.dtypes
+# %%
