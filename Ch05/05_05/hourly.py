@@ -67,3 +67,4 @@ hourly_df.pivot(
     index='hour',
     values='VendorID'
 ).plot.bar(rot=0)
+# %%

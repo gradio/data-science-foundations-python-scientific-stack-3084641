@@ -42,3 +42,4 @@ df['Vendor'].head().cat.codes
 
 # %%
 len(df[df['Vendor'] == 'VeriFone'])
+# %%

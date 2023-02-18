@@ -51,3 +51,4 @@ jdf.head()
 
 # %%
 jdf.plot.scatter(x='tempF', y='Vendor');
+# %%

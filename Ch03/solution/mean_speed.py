@@ -18,3 +18,5 @@ speed = df['trip_distance'] / times_hour
 
 # %%
 speed.mean()
+
+# %%

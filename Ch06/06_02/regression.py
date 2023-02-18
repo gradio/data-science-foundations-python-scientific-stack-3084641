@@ -1,4 +1,7 @@
 # %%
+from IPython import display
+from sklearn.tree import export_graphviz
+from sklearn.ensemble import RandomForestRegressor
 from sklearn.datasets import fetch_california_housing
 
 cal_housing = fetch_california_housing()
@@ -22,7 +25,6 @@ print(cal_housing['DESCR'])
 cal_housing['target'][:10]
 
 # %%
-from sklearn.ensemble import RandomForestRegressor
 
 X, y = cal_housing['data'], cal_housing['target']
 
@@ -45,19 +47,17 @@ clf.n_features_in_
 X.shape
 
 # %%
-from sklearn.tree import export_graphviz
 
 export_graphviz(
-    clf.estimators_[0], 
+    clf.estimators_[0],
     'tree.dot',
     feature_names=cal_housing['feature_names'],
     max_depth=5,
 )
 # %%
-!dot -Tsvg -o tree.svg tree.dot
+!dot - Tsvg - o tree.svg tree.dot
 
 # %%
-from IPython import display
 
 display.SVG('tree.svg')
 
@@ -69,7 +69,7 @@ clf.predict(row)
 # %%
 row.shape
 
-#%%
+# %%
 
 row = X[i:i+1]
 row.shape
@@ -79,3 +79,4 @@ clf.predict(row)
 
 # %%
 y[i]
+# %%

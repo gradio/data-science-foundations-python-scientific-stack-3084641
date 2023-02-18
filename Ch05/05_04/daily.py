@@ -61,3 +61,5 @@ ax = s.plot.bar(
     rot=0,
 )
 ax.set_ylabel('Number of Rides')
+
+# %%
