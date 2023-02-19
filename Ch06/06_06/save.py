@@ -35,3 +35,4 @@ with open(out_file, 'wb') as out:
 with open(out_file, 'rb') as fp:
     pipe1 = pickle.load(fp)
 pipe1.score(X_test, y_test)
+# %%

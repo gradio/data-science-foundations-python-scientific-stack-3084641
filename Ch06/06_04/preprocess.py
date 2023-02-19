@@ -1,4 +1,9 @@
 # %%
+from sklearn.decomposition import PCA
+import pandas as pd
+from sklearn import preprocessing
+from sklearn.svm import SVR
+from sklearn.model_selection import train_test_split
 from sklearn.datasets import fetch_california_housing
 
 cal_housing = fetch_california_housing(as_frame=True)
@@ -6,7 +11,6 @@ df = cal_housing['data']
 df.describe()
 
 # %%
-from sklearn.model_selection import train_test_split
 
 X, y = cal_housing['data'], cal_housing['target']
 X_train, X_test, y_train, y_test = train_test_split(
@@ -15,19 +19,16 @@ X_train, X_test, y_train, y_test = train_test_split(
 )
 
 # %%
-from sklearn.svm import SVR
 
 clf = SVR()
 clf.fit(X_train, y_train)
 clf.score(X_test, y_test)
- 
+
 # %%
-from sklearn import preprocessing
 
 X_scaled = preprocessing.scale(X)
 
 # %%
-import pandas as pd
 
 df = pd.DataFrame(
     X_scaled,
@@ -46,8 +47,8 @@ clf.fit(X_train, y_train)
 clf.score(X_test, y_test)
 
 # %%
-from sklearn.decomposition import PCA
 
 pca = PCA(n_components=4)
 X_pca = pca.fit_transform(X)
 X_pca.shape
+# %%

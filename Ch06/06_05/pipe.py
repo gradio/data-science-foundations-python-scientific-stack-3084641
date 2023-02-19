@@ -35,3 +35,4 @@ pipe.get_params()
 
 # %%
 pipe.set_params(svr__C=0.9)
+# %%

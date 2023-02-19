@@ -20,3 +20,4 @@ from sklearn.ensemble import RandomForestRegressor
 clf = RandomForestRegressor()
 clf.fit(X_train, y_train)
 clf.score(X_test, y_test)
+# %%
